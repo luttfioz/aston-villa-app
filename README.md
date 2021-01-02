@@ -1,5 +1,11 @@
 # AstonVillaApp
 
+> docker build -t av-app-multistage-image .
+
+> docker run --name av-app-multistage-container -d -p 8888:80 av-app-multistage-image
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server
