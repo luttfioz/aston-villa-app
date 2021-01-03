@@ -1,9 +1,34 @@
 # AstonVillaApp
 
-> docker build -t av-app-multistage-image .
+> docker build -t av-nginx .
 
-> docker run --name av-app-multistage-container -d -p 8888:80 av-app-multistage-image
+> docker run --name av-app-multistage-container -d -p 8888:80 av-nginx
 
+> docker login --username=[username]
+
+> docker tag [imageId] [username]/av-nginx:latest
+
+> docker push [username]/av-nginx
+
+> docker container prune
+> docker image prune -a
+
+Prune deletes container and image
+
+> docker comtainer logs [containerID]
+
+az container create --resource-group cloud-shell-storage-westeurope --name mycontainer --image lutfioz/av-nginx --ports 80  
+https://docs.microsoft.com/en-us/learn/modules/run-docker-with-azure-container-instances/2-run-aci   
+or   
+
+https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart-portal   
+
+
+DockerHub to Container  
+http://my-aston-villa.westeurope.azurecontainer.io/  
+
+Static Web App  
+https://green-coast-04884eb03.azurestaticapps.net/
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
